@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<div>
+    <th:block th:each="msg : ${messages}">
+        <h1 th:text="${msg}"></h1>
+    </th:block>
+    <br/>
+    <a th:href="@{/cars}">View all cars</a>
+    <br/><br/>
+    <a th:href="@{/cars?count=2}">View 2 cars</a>
+    <br/><br/>
+    <a th:href="@{/cars?count=3}">View 3 cars</a>
+
+</div>
+</body>
+</html>
